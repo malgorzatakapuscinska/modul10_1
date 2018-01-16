@@ -29,20 +29,33 @@ $(function(){
 	
 	$("body").append(pWithText);//adds created paragraph to DOM
 	$("body").append(pWithClass);//adds created paragraph to DOM
-	
 });
 
 
 $(function(){
 
-	$('p').each(function( index, elem ) {
+	$("p").each(function( index, elem ) {
 		$(elem).text('paragraph' + index);
 	});
 });
 
 $(function(){
 
-	$('p').each(function( index, elem ) {
+	$("p").each(function( index, elem ) {
 		$(elem).text('paragraph' + index);
 	}).css('color', 'pink');
 });
+
+$(function(){
+	var li = $("nav").find("li").last();
+	li.css('color', 'red');
+});
+
+$("ul").append(' <li> New list item </li> '); //adds new lemenent li at the end of list items
+
+var firstListItem = $("nav").find("li").first();
+console.log(firstListItem.text());
+
+firstListItem.css('color', 'blue');
+
+
